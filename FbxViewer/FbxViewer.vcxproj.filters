@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{bcdc0584-6a5f-42b2-9d2e-12d0248ff55f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game">
+      <UniqueIdentifier>{c6c548d8-b56b-4fa6-843c-d5ea4d51e84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\GameController">
+      <UniqueIdentifier>{e6f8c6c1-bbd3-4de9-8ac0-90addf95b789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ActionsController">
+      <UniqueIdentifier>{c92ab46c-702d-46a4-801b-bc5a738925dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\CameraController">
+      <UniqueIdentifier>{23cdc6d2-6505-4c7d-855d-25a7d2378543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gui">
+      <UniqueIdentifier>{57b77caf-14dc-403c-821c-140cad1f32ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gui\MenuCreator">
+      <UniqueIdentifier>{55ce0273-290d-4422-8901-377cb33fde01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ObjectPicker">
+      <UniqueIdentifier>{11aa9dea-0095-4113-95d3-a5d563170a5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Prototypes">
+      <UniqueIdentifier>{c0b6d4df-5ac2-4dd0-a85a-dca2c295d5fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Session">
+      <UniqueIdentifier>{f0913591-a159-4f98-aefe-91212e5e2373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Session\SessionView">
+      <UniqueIdentifier>{ab79f18c-0f21-4851-93e2-388cb39d096e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Settings">
+      <UniqueIdentifier>{3157e9b9-c00a-45fc-9fd2-5da2e1844b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\View">
+      <UniqueIdentifier>{2e60b94b-0e7f-4ba0-b76d-770001c05136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\World">
+      <UniqueIdentifier>{32d53dd6-ca87-4d3f-ae4b-f57013d57673}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>src\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>src\Game\GameController</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionsController.cpp">
+      <Filter>src\ActionsController</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraController.cpp">
+      <Filter>src\CameraController</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateTransition.cpp">
+      <Filter>src\Game\GameController</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCreator.cpp">
+      <Filter>src\Gui\MenuCreator</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui.cpp">
+      <Filter>src\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="IngameGui.cpp">
+      <Filter>src\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectInfo.cpp">
+      <Filter>src\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPicker.cpp">
+      <Filter>src\ObjectPicker</Filter>
+    </ClCompile>
+    <ClCompile Include="PrototypeCollection.cpp">
+      <Filter>src\Prototypes</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionView.cpp">
+      <Filter>src\Session\SessionView</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>src\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateSession.cpp">
+      <Filter>src\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="TileView.cpp">
+      <Filter>src\View</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectView.cpp">
+      <Filter>src\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>src\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>src\Game\GameController</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvents.h">
+      <Filter>src\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Fwd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionsController.h">
+      <Filter>src\ActionsController</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraController.h">
+      <Filter>src\CameraController</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateTransition.h">
+      <Filter>src\Game\GameController</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>src\Game\GameController</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCreator.h">
+      <Filter>src\Gui\MenuCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui.h">
+      <Filter>src\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="IngameGui.h">
+      <Filter>src\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectInfo.h">
+      <Filter>src\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPicker.h">
+      <Filter>src\ObjectPicker</Filter>
+    </ClInclude>
+    <ClInclude Include="Prototype.h">
+      <Filter>src\Prototypes</Filter>
+    </ClInclude>
+    <ClInclude Include="PrototypeCollection.h">
+      <Filter>src\Prototypes</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionView.h">
+      <Filter>src\Session\SessionView</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>src\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateSession.h">
+      <Filter>src\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="TileGridSettings.h">
+      <Filter>src\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="TileSettings.h">
+      <Filter>src\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSettings.h">
+      <Filter>src\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraSettings.h">
+      <Filter>src\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="TileView.h">
+      <Filter>src\View</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectView.h">
+      <Filter>src\View</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEvents.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

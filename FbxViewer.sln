@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FbxViewer", "FbxViewer\FbxViewer.vcxproj", "{AAF13105-EF9E-4109-990D-83DD65DF8FCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{F4DFE4A9-1A44-4721-905F-40D28723C9D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{BF166202-5A27-4D48-8C4E-1F54C1B51A5C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectXTK_Desktop_2022", "..\DirectXTK\DirectXTK_Desktop_2022.vcxproj", "{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LaggySdk", "..\LaggySdk\LaggySdk\LaggySdk.vcxproj", "{26F606C5-4239-49F0-B3D4-C358526C2325}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LaggyDx", "..\LaggyDx\LaggyDx\LaggyDx.vcxproj", "{27FCDF2C-D499-4F8E-A388-494AB948F151}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Debug|x64.ActiveCfg = Debug|x64
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Debug|x64.Build.0 = Debug|x64
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Debug|x86.ActiveCfg = Debug|Win32
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Debug|x86.Build.0 = Debug|Win32
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Release|x64.ActiveCfg = Release|x64
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Release|x64.Build.0 = Release|x64
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Release|x86.ActiveCfg = Release|Win32
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE}.Release|x86.Build.0 = Release|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x64.ActiveCfg = Debug|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x64.Build.0 = Debug|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x86.ActiveCfg = Debug|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x86.Build.0 = Debug|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x64.ActiveCfg = Release|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x64.Build.0 = Release|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x86.ActiveCfg = Release|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x86.Build.0 = Release|Win32
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Debug|x64.ActiveCfg = Debug|x64
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Debug|x64.Build.0 = Debug|x64
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Debug|x86.ActiveCfg = Debug|Win32
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Debug|x86.Build.0 = Debug|Win32
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Release|x64.ActiveCfg = Release|x64
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Release|x64.Build.0 = Release|x64
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Release|x86.ActiveCfg = Release|Win32
+		{26F606C5-4239-49F0-B3D4-C358526C2325}.Release|x86.Build.0 = Release|Win32
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Debug|x64.ActiveCfg = Debug|x64
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Debug|x64.Build.0 = Debug|x64
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Debug|x86.ActiveCfg = Debug|Win32
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Debug|x86.Build.0 = Debug|Win32
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Release|x64.ActiveCfg = Release|x64
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Release|x64.Build.0 = Release|x64
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Release|x86.ActiveCfg = Release|Win32
+		{27FCDF2C-D499-4F8E-A388-494AB948F151}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AAF13105-EF9E-4109-990D-83DD65DF8FCE} = {F4DFE4A9-1A44-4721-905F-40D28723C9D3}
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E} = {BF166202-5A27-4D48-8C4E-1F54C1B51A5C}
+		{26F606C5-4239-49F0-B3D4-C358526C2325} = {BF166202-5A27-4D48-8C4E-1F54C1B51A5C}
+		{27FCDF2C-D499-4F8E-A388-494AB948F151} = {BF166202-5A27-4D48-8C4E-1F54C1B51A5C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04B24E52-DA4A-4C09-B000-E5C19F2E53E3}
+	EndGlobalSection
+EndGlobal
