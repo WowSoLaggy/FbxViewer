@@ -163,7 +163,6 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectInfo.cpp" />
     <ClCompile Include="ObjectView.cpp" />
-    <ClCompile Include="PrototypeCollection.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="SessionView.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -189,8 +188,6 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectInfo.h" />
     <ClInclude Include="ObjectView.h" />
-    <ClInclude Include="Prototype.h" />
-    <ClInclude Include="PrototypeCollection.h" />
     <ClInclude Include="RenderSettings.h" />
     <ClInclude Include="Session.h" />
     <ClInclude Include="SessionView.h" />

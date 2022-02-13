@@ -11,9 +11,10 @@
 class Object : public Sdk::EventHandler, public Sdk::IUniqueId
 {
 public:
-  Object(const Prototype& i_prototype);
+  Object(fs::path i_modelPath, fs::path i_texturePath = {});
 
-  const Prototype& getPrototype() const;
+  const fs::path& getModelPath() const;
+  const fs::path& getTexturePath() const;
 
   virtual Sdk::Vector3F getPosition() const;
   virtual Sdk::Vector3F getRotation() const;
@@ -39,7 +40,8 @@ public:
   std::optional<Dx::Obb> getObb() const;
 
 private:
-  const Prototype& d_prototype;
+  const fs::path d_modelPath;
+  const fs::path d_texturePath;
 
   Sdk::Vector3F d_position;
   Sdk::Vector3F d_rotation;

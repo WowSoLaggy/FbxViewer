@@ -13,15 +13,16 @@ namespace
 {
   const Dx::GameSettings& getGameSettings()
   {
-    static const Dx::GameSettings gameSettings{ 1600, 900, "General", "Data/Assets/" };
+    static const Dx::GameSettings gameSettings{ 1200, 900, "General", "Data/Assets/" };
     return gameSettings;
   }
 
 } // anon NS
 
 
-Game::Game()
+Game::Game(fs::path i_modelPath)
   : Dx::Game(getGameSettings())
+  , d_modelPath(std::move(i_modelPath))
 {
   getInputDevice().showCursor();
   getRenderDevice().setClearColor(RenderSettings::ClearColor);
@@ -33,8 +34,16 @@ Game::Game()
 }
 
 
-void Game::update(double i_dt)
+const fs::path& Game::getModelPath() const
 {
+  return d_modelPath;
+}
+
+
+void Game::update(const double i_dt)
+{
+  if (d_session)
+    d_session->udpate(i_dt);
   if (d_sessionView)
     d_sessionView->update(i_dt);
 

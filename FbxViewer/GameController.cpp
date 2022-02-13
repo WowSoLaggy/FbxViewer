@@ -25,7 +25,7 @@ void GameController::processEvent(const Sdk::IEvent& i_event)
 
 void GameController::onGameStarted()
 {
-  d_game.attachSession(createSession());
+  d_game.attachSession(createSession(d_game.getModelPath()));
   d_game.attachSessionView();
 
   ActionsController().createActionsInGame(d_game);

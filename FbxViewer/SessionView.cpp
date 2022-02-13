@@ -3,7 +3,6 @@
 
 #include "CameraController.h"
 #include "Game.h"
-#include "PrototypeCollection.h"
 
 #include <LaggyDx/ISimpleRenderer.h>
 
@@ -32,9 +31,8 @@ SessionView::SessionView(Game& i_game)
       i_game.getRenderDevice(), d_cameraController.getCamera(), i_game.getResourceController()))
   , d_session(i_game.getSession())
   , d_resourceController(i_game.getResourceController())
-  , d_backgroundView(*i_game.getSession().getBackground(), i_game.getResourceController())
-  , d_object(PrototypeCollection::get("worker"))
-  , d_objectView(d_object, i_game.getResourceController())
+  , d_backgroundView(*i_game.getSession().getBackground(), i_game.getResourceController(), i_game.getRenderDevice())
+  , d_objectView(*i_game.getSession().getObject(), i_game.getResourceController(), i_game.getRenderDevice())
 {
 }
 
@@ -64,8 +62,7 @@ void SessionView::render()
 void SessionView::update(const double i_dt)
 {
   d_cameraController.update(i_dt);
-
-  d_object.update(i_dt);
+  d_backgroundView.update();
   d_objectView.update();
 }
 

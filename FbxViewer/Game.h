@@ -12,7 +12,9 @@
 class Game : public Dx::Game, public Sdk::EventHandler
 {
 public:
-  Game();
+  Game(fs::path i_modelPath);
+
+  const fs::path& getModelPath() const;
 
   virtual void update(double i_dt) override;
   virtual void render() override;
@@ -30,4 +32,6 @@ private:
   std::unique_ptr<Gui> d_gui;
   std::unique_ptr<Session> d_session;
   std::unique_ptr<SessionView> d_sessionView;
+
+  const fs::path d_modelPath;
 };

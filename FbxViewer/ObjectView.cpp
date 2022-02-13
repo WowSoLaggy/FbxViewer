@@ -2,24 +2,37 @@
 #include "ObjectView.h"
 
 #include "Object.h"
-#include "Prototype.h"
 
 #include <LaggyDx/FbxResource.h>
 #include <LaggyDx/IResourceController.h>
 
 
-ObjectView::ObjectView(Object& i_object, const Dx::IResourceController& i_resourceController)
+ObjectView::ObjectView(
+  Object& i_object,
+  const Dx::IResourceController& i_resourceController,
+  Dx::IRenderDevice& i_renderDevice)
   : d_object(i_object)
 {
-  const auto& ifbxResource = i_resourceController.getFbxResource(d_object.getPrototype().modelFilepath);
-  const auto* fbxResource = dynamic_cast<const Dx::FbxResource*>(&ifbxResource);
-  CONTRACT_ASSERT(fbxResource);
-  d_model = &fbxResource->getModel();
-
-  if (!d_object.getPrototype().textureFilepath.empty())
-    d_textureResource = &i_resourceController.getTextureResource(d_object.getPrototype().textureFilepath);
+  if (!d_object.getTexturePath().empty())
+    d_textureResource = &i_resourceController.getTexture(d_object.getTexturePath());
   else
     d_textureResource = nullptr;
+
+  if (i_resourceController.hasResource(d_object.getModelPath()))
+  {
+    const auto& ifbxResource = i_resourceController.getFbx(d_object.getModelPath());
+    const auto* fbxResource = dynamic_cast<const Dx::FbxResource*>(&ifbxResource);
+    CONTRACT_ASSERT(fbxResource);
+    d_model = &fbxResource->getModel();
+  }
+  else
+  {
+    d_fbx = std::make_shared<Dx::FbxResource>(d_object.getModelPath());
+    auto* fbxResource = dynamic_cast<Dx::FbxResource*>(d_fbx.get());
+    CONTRACT_ASSERT(fbxResource);
+    fbxResource->load(i_renderDevice);
+    d_model = &fbxResource->getModel();
+  }
 }
 
 
@@ -31,6 +44,11 @@ const Object& ObjectView::getObject() const
 
 void ObjectView::update()
 {
+  CONTRACT_ASSERT(d_model);
+
+  if (!d_object.hasAnimation() && !d_model->getAnimations().empty())
+    d_object.setAnimation(d_model->getAnimations().begin()->first, true);
+
   if (const auto* animation = getAnimation())
   {
     if (d_object.getAnimationTime() >= animation->length)

@@ -30,8 +30,6 @@ private:
   Session& d_session;
 
   ObjectView d_backgroundView;
-
-  Object d_object;
   ObjectView d_objectView;
 
   bool d_drawBb = false;

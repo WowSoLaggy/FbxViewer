@@ -6,13 +6,23 @@
 #include <LaggyDx/IModel.h>
 
 
-Object::Object(const Prototype& i_prototype)
-  : d_prototype(i_prototype)
+Object::Object(fs::path i_modelPath, fs::path i_texturePath)
+  : d_modelPath(std::move(i_modelPath))
+  , d_texturePath(std::move(i_texturePath))
 {
 }
 
 
-const Prototype& Object::getPrototype() const { return d_prototype; }
+const fs::path& Object::getModelPath() const
+{
+  return d_modelPath;
+}
+
+const fs::path& Object::getTexturePath() const
+{
+  return d_texturePath;
+}
+
 
 Sdk::Vector3F Object::getPosition() const { return d_position; }
 Sdk::Vector3F Object::getRotation() const { return d_rotation; }

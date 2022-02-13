@@ -2,7 +2,6 @@
 #include "ObjectInfo.h"
 
 #include "Object.h"
-#include "Prototype.h"
 
 #include <LaggyDx/Label.h>
 #include <LaggyDx/Panel.h>
@@ -28,6 +27,6 @@ void ObjectInfo::hide() const
 
 void ObjectInfo::setObject(const Object& i_object) const
 {
-  const std::string text = i_object.getPrototype().name + " (" + std::to_string(i_object.getId()) + ")";
+  const std::string text = i_object.getModelPath().string() + " (" + std::to_string(i_object.getId()) + ")";
   d_label.setText(text);
 }

@@ -9,7 +9,10 @@
 class ObjectView : public Dx::IObject3
 {
 public:
-  ObjectView(Object& i_object, const Dx::IResourceController& i_resourceController);
+  ObjectView(
+    Object& i_object,
+    const Dx::IResourceController& i_resourceController,
+    Dx::IRenderDevice& i_renderDevice);
 
   const Object& getObject() const;
 
@@ -25,6 +28,7 @@ public:
 private:
   Object& d_object;
 
+  std::shared_ptr<Dx::IFbxResource> d_fbx;
   const Dx::IModel* d_model = nullptr;
   const Dx::ITextureResource* d_textureResource = nullptr;
 

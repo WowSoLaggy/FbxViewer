@@ -22,9 +22,6 @@
     <Filter Include="src\Gui\MenuCreator">
       <UniqueIdentifier>{55ce0273-290d-4422-8901-377cb33fde01}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Prototypes">
-      <UniqueIdentifier>{c0b6d4df-5ac2-4dd0-a85a-dca2c295d5fd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Session">
       <UniqueIdentifier>{f0913591-a159-4f98-aefe-91212e5e2373}</UniqueIdentifier>
     </Filter>
@@ -71,9 +68,6 @@
     </ClCompile>
     <ClCompile Include="ObjectInfo.cpp">
       <Filter>src\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="PrototypeCollection.cpp">
-      <Filter>src\Prototypes</Filter>
     </ClCompile>
     <ClCompile Include="SessionView.cpp">
       <Filter>src\Session\SessionView</Filter>
@@ -127,12 +121,6 @@
     </ClInclude>
     <ClInclude Include="ObjectInfo.h">
       <Filter>src\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="Prototype.h">
-      <Filter>src\Prototypes</Filter>
-    </ClInclude>
-    <ClInclude Include="PrototypeCollection.h">
-      <Filter>src\Prototypes</Filter>
     </ClInclude>
     <ClInclude Include="SessionView.h">
       <Filter>src\Session\SessionView</Filter>
