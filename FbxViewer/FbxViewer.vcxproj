@@ -158,12 +158,10 @@
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameStateTransition.cpp" />
     <ClCompile Include="Gui.cpp" />
-    <ClCompile Include="IngameGui.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuCreator.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectInfo.cpp" />
-    <ClCompile Include="ObjectPicker.cpp" />
     <ClCompile Include="ObjectView.cpp" />
     <ClCompile Include="PrototypeCollection.cpp" />
     <ClCompile Include="Session.cpp" />
@@ -174,8 +172,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="TileView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionsController.h" />
@@ -189,11 +185,9 @@
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateTransition.h" />
     <ClInclude Include="Gui.h" />
-    <ClInclude Include="IngameGui.h" />
     <ClInclude Include="MenuCreator.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectInfo.h" />
-    <ClInclude Include="ObjectPicker.h" />
     <ClInclude Include="ObjectView.h" />
     <ClInclude Include="Prototype.h" />
     <ClInclude Include="PrototypeCollection.h" />
@@ -201,11 +195,6 @@
     <ClInclude Include="Session.h" />
     <ClInclude Include="SessionView.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Tile.h" />
-    <ClInclude Include="TileGridSettings.h" />
-    <ClInclude Include="TileSettings.h" />
-    <ClInclude Include="TileView.h" />
-    <ClInclude Include="WorldEvents.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\LaggyDx\LaggyDx\LaggyDx.vcxproj">

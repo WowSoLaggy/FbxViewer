@@ -35,8 +35,6 @@ Game::Game()
 
 void Game::update(double i_dt)
 {
-  if (d_session)
-    d_session->update(i_dt);
   if (d_sessionView)
     d_sessionView->update(i_dt);
 

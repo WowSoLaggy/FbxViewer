@@ -30,12 +30,9 @@ private:
   Session& d_session;
 
   ObjectView d_backgroundView;
-  std::vector<std::shared_ptr<TileView>> d_tileViews;
 
-  Object d_selectionMarker;
-  ObjectView d_selectionMarkerView;
+  Object d_object;
+  ObjectView d_objectView;
 
   bool d_drawBb = false;
-
-  void addView(Tile& i_tile);
 };

@@ -4,9 +4,6 @@
 #include "CameraController.h"
 #include "Game.h"
 #include "PrototypeCollection.h"
-#include "Tile.h"
-#include "TileGridSettings.h"
-#include "TileView.h"
 
 #include <LaggyDx/ISimpleRenderer.h>
 
@@ -36,14 +33,9 @@ SessionView::SessionView(Game& i_game)
   , d_session(i_game.getSession())
   , d_resourceController(i_game.getResourceController())
   , d_backgroundView(*i_game.getSession().getBackground(), i_game.getResourceController())
-  , d_selectionMarker(PrototypeCollection::get("selection_marker"))
-  , d_selectionMarkerView(d_selectionMarker, i_game.getResourceController())
+  , d_object(PrototypeCollection::get("worker"))
+  , d_objectView(d_object, i_game.getResourceController())
 {
-  const auto& startLocation = d_session.getTile(d_session.getPlayerStartTile()).getPosition();
-  d_cameraController.getCamera().setLookAt(startLocation);
-
-  for (auto& tilePtr : d_session.getTiles())
-    addView(*tilePtr);
 }
 
 
@@ -63,14 +55,9 @@ void SessionView::render()
   d_simpleRenderer.setDrawAabb(d_drawBb);
 
   d_simpleRenderer.draw(d_backgroundView);
-
-  for (const auto& tileViewPtr : d_tileViews)
-    tileViewPtr->render(d_simpleRenderer);
+  d_simpleRenderer.draw(d_objectView);
 
   d_simpleRenderer.setDrawAabb(false);
-
-  if (d_game.getController().isObjectPicked())
-    d_simpleRenderer.draw(d_selectionMarkerView);
 }
 
 
@@ -78,26 +65,12 @@ void SessionView::update(const double i_dt)
 {
   d_cameraController.update(i_dt);
 
-  for (auto& tileViewPtr : d_tileViews)
-    tileViewPtr->update();
-
-  if (const auto* pickedObject = d_game.getController().getPickedObject())
-  {
-    d_selectionMarker.setPosition(pickedObject->getPosition());
-    const float scale = getCharSize(*pickedObject) / 2.0f;
-    d_selectionMarker.setScale({ scale, scale, 1.0f });
-  }
+  d_object.update(i_dt);
+  d_objectView.update();
 }
 
 
 void SessionView::setDrawBb(const bool i_drawBb)
 {
   d_drawBb = i_drawBb;
-}
-
-
-void SessionView::addView(Tile& i_tile)
-{
-  auto tileViewPtr = std::make_shared<TileView>(i_tile, d_resourceController);
-  d_tileViews.push_back(std::move(tileViewPtr));
 }

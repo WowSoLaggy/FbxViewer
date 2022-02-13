@@ -93,17 +93,5 @@ void ActionsController::createActionsInGame(Game& i_game)
     Dx::ActionType::OnPress);
 
 
-  map.setAction(
-    Dx::MouseKey::Left,
-    Dx::Action(std::bind(&GameController::tryPickObject, &i_game.getController())),
-    Dx::ActionType::OnPress);
-
-
-  map.setAction(
-    Dx::KeyboardKey::F1,
-    Dx::Action(std::bind(&Gui::switchDebugMenu, &i_game.getGui())),
-    Dx::ActionType::OnPress);
-
-
   i_game.setActionsMap(std::move(map));
 }

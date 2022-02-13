@@ -22,9 +22,6 @@
     <Filter Include="src\Gui\MenuCreator">
       <UniqueIdentifier>{55ce0273-290d-4422-8901-377cb33fde01}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\ObjectPicker">
-      <UniqueIdentifier>{11aa9dea-0095-4113-95d3-a5d563170a5d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Prototypes">
       <UniqueIdentifier>{c0b6d4df-5ac2-4dd0-a85a-dca2c295d5fd}</UniqueIdentifier>
     </Filter>
@@ -72,14 +69,8 @@
     <ClCompile Include="Gui.cpp">
       <Filter>src\Gui</Filter>
     </ClCompile>
-    <ClCompile Include="IngameGui.cpp">
-      <Filter>src\Gui</Filter>
-    </ClCompile>
     <ClCompile Include="ObjectInfo.cpp">
       <Filter>src\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectPicker.cpp">
-      <Filter>src\ObjectPicker</Filter>
     </ClCompile>
     <ClCompile Include="PrototypeCollection.cpp">
       <Filter>src\Prototypes</Filter>
@@ -93,14 +84,8 @@
     <ClCompile Include="CreateSession.cpp">
       <Filter>src\Session</Filter>
     </ClCompile>
-    <ClCompile Include="TileView.cpp">
-      <Filter>src\View</Filter>
-    </ClCompile>
     <ClCompile Include="ObjectView.cpp">
       <Filter>src\View</Filter>
-    </ClCompile>
-    <ClCompile Include="Tile.cpp">
-      <Filter>src\World</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
       <Filter>src\World</Filter>
@@ -140,14 +125,8 @@
     <ClInclude Include="Gui.h">
       <Filter>src\Gui</Filter>
     </ClInclude>
-    <ClInclude Include="IngameGui.h">
-      <Filter>src\Gui</Filter>
-    </ClInclude>
     <ClInclude Include="ObjectInfo.h">
       <Filter>src\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectPicker.h">
-      <Filter>src\ObjectPicker</Filter>
     </ClInclude>
     <ClInclude Include="Prototype.h">
       <Filter>src\Prototypes</Filter>
@@ -164,29 +143,14 @@
     <ClInclude Include="CreateSession.h">
       <Filter>src\Session</Filter>
     </ClInclude>
-    <ClInclude Include="TileGridSettings.h">
-      <Filter>src\Settings</Filter>
-    </ClInclude>
-    <ClInclude Include="TileSettings.h">
-      <Filter>src\Settings</Filter>
-    </ClInclude>
     <ClInclude Include="RenderSettings.h">
       <Filter>src\Settings</Filter>
     </ClInclude>
     <ClInclude Include="CameraSettings.h">
       <Filter>src\Settings</Filter>
     </ClInclude>
-    <ClInclude Include="TileView.h">
-      <Filter>src\View</Filter>
-    </ClInclude>
     <ClInclude Include="ObjectView.h">
       <Filter>src\View</Filter>
-    </ClInclude>
-    <ClInclude Include="WorldEvents.h">
-      <Filter>src\World</Filter>
-    </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>src\World</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
       <Filter>src\World</Filter>

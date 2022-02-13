@@ -6,5 +6,5 @@
 class RenderSettings
 {
 public:
-  static constexpr Sdk::Vector4F ClearColor = Dx::Colors::Gray10;
+  static constexpr Sdk::Vector4F ClearColor = Dx::Colors::Gray80;
 };
